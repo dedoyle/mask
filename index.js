@@ -13,6 +13,12 @@ window.onload = () => {
     }
 
     generateCells(width, height)
+
+    document.oncontextmenu = function (e) {
+      e.preventDefault()
+    }
+    const panel = document.getElementById('panel')
+    panel.onmousedown = handleBoxClick
   }
 }
 
@@ -59,4 +65,27 @@ function drawCells(data, width, height) {
 
 function hideForm() {
   document.getElementById('form').classList.add('hidden')
+}
+
+// 生成随机颜色
+function getRandomColor() {
+  return (
+    '#' +
+    (function (color) {
+      return (color += '0123456789abcdef'[Math.floor(Math.random() * 16)]) &&
+        color.length == 6
+        ? color
+        : arguments.callee(color)
+    })('')
+  )
+}
+
+// 点击盒子填充或清除颜色
+function handleBoxClick(ev) {
+  const el = ev.target
+  if (ev.button === 0) {
+    el.style.backgroundColor = getRandomColor()
+  } else if (ev.button === 2) {
+    el.style.backgroundColor = 'unset'
+  }
 }
