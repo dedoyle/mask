@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-cn" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>马赛克画板</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body class="h-full">
+    <div class="h-full flex justify-center items-center" id="form">
+      <div class="w-500">
+        <header class="text-center">请输入正整数</header>
+        <div class="num mt-20">
+          <label for="width-num" class="mr-10 lh-30">宽度</label
+          ><input
+            id="width-num"
+            class="lh-30"
+            type="number"
+            step="1"
+            value="100"
+          />
+        </div>
+        <div class="num mt-20">
+          <label for="height-num" class="mr-10 lh-30">高度</label
+          ><input
+            id="height-num"
+            class="lh-30"
+            type="number"
+            step="1"
+            value="100"
+          />
+        </div>
+        <button id="btn" class="block w-full mt-20 lh-30">确定</button>
+      </div>
+    </div>
+    <div id="panel" class="hidden h-full flex flex-wrap"></div>
+    <script src="./index.js"></script>
+  </body>
+</html>
