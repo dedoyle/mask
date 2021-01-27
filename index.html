@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>马赛克画板</title>
     <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./color.css" />
   </head>
   <body class="h-full">
     <div class="h-full flex justify-center items-center" id="form">
@@ -33,7 +34,12 @@
         <button id="btn" class="block w-full mt-20 lh-30">确定</button>
       </div>
     </div>
-    <div id="panel" class="hidden h-full flex flex-wrap"></div>
-    <script src="./index.js"></script>
+    <div id="panel" class="hidden h-full lh-0 relative">
+      <div
+        id="island-num"
+        class="absolute top-60 right-60 text-60 text-primary opacity-0 transition-opacity lh-60"
+      ></div>
+    </div>
+    <script src="./index.js" type="module"></script>
   </body>
 </html>

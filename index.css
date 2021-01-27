@@ -14,6 +14,10 @@ body {
   flex-wrap: wrap;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
 .block {
   display: block;
 }
@@ -50,10 +54,75 @@ body {
   margin-top: 20px;
 }
 
+.pd-10 {
+  padding: 10px;
+}
+
+.lh-0 {
+  line-height: 0;
+}
+
 .lh-30 {
   line-height: 30px;
 }
 
+.lh-60 {
+  line-height: 60px;
+}
+
 .bd-1 {
-  border: 1px solid #ccc;
+  border-width: 1px;
+}
+
+.bd-solid {
+  border-style: solid;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.top-60 {
+  top: 60px;
+}
+
+.right-60 {
+  right: 60px;
+}
+
+.text-60 {
+  font-size: 60px;
+}
+
+.transition-opacity {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-colors {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  /* 为了让渐变效果更明显 */
+  transition-duration: 500ms;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-1 {
+  opacity: 1;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.text-center {
+  text-align: center;
 }
